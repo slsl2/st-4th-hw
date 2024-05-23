@@ -1,4 +1,7 @@
 import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home.jsx";
+import Detail from "./pages/Detailjsx";
 
 function App() {
   /**
@@ -14,7 +17,16 @@ function App() {
     |-- App.jsx
    */
 
-  return <></>;
+  return (
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/detail/:id" element={<Detail />} />
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
 }
 
 export default App;

@@ -1,7 +1,6 @@
+import React from "react";
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./pages/Home.jsx";
-import Detail from "./pages/Detailjsx";
+import Router from "./shared/Router.jsx";
 
 function App() {
   /**
@@ -17,16 +16,7 @@ function App() {
     |-- App.jsx
    */
 
-  return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/detail/:id" element={<Detail />} />
-        </Routes>
-      </BrowserRouter>
-    </>
-  );
+  return <Router />;
 }
 
 export default App;
